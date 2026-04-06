@@ -1,0 +1,94 @@
+add all files and push the code
+
+---
+
+let's start this project .. read @trinkbrunnen-app-planung.md and do a login .. i have some some .. that you should look at before .. in ../android-login .. copy this project as a start.. instead of subabase, let's use firebase. I need to setup firebase first. use a placeholder for now
+
+---
+
+can you setup firebase with the cli? (it's a question, don't do it)
+
+---
+
+i installed firebase cli, but it's not available. do i need to install it globally?
+
+---
+
+go for it
+
+---
+
+ok. i am logged in .. now do everything you can do and ask me to do the manual stuff
+
+---
+
+com.example.brunnenapp REDACTED.apps.googleusercontent.com
+
+---
+
+Aliasname: androiddebugkey
+Erstellungsdatum: 05.04.2026
+Eintragstyp: PrivateKeyEntry
+Zertifikatskettenlänge: 1
+Zertifikat[1]:
+Eigentümer: C=US, O=Android, CN=Android Debug
+Aussteller: C=US, O=Android, CN=Android Debug
+Seriennummer: 1
+Gültig von: Sun Apr 05 15:33:44 CEST 2026 bis: Tue Mar 28 15:33:44 CEST 2056
+Zertifikatfingerprints:
+         MD5: 5D:19:2C:F5:2C:42:D7:67:F1:C1:EF:BF:1A:8F:37:F6:33:5F:2F:54
+         SHA1: 5B:B8:2B:DA:39:94:61:80:6E:84:F8:2E:35:02:6E:D6:61:F8:68:D6:72:61:B8:85:0A:BC:3B:76:D8:06:1E:B4
+         SHA256: SHA256withRSA
+Signaturalgorithmusname: 2048-Bit-RSA-Schlüssel
+Algorithmus des Public Key von Betreff: 1
+Version: {10}
+
+---
+
+i did that already
+
+---
+
+now go back to @trinkbrunnen-app-planung.md and finish the project
+
+---
+
+yeah, let's take the app for a spin
+
+---
+
+run it in an emulator
+
+---
+
+<task-notification>
+<task-id>btq1tc0mo</task-id>
+<tool-use-id>toolu_016DTd3SZh6bRq3GAdUdrps1</tool-use-id>
+<output-file>C:\Users\enesp\AppData\Local\Temp\claude\C--Users-enesp-Desktop-coding-brunnen-app\6b5b5ca7-a294-4fe8-8bea-b281bcc3ff3f\tasks\btq1tc0mo.output</output-file>
+<status>completed</status>
+<summary>Background command "Start Android emulator" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+when i select my nickname, i get PERMISSION_DENIED
+
+---
+
+can you set the location of the emulator to zurich?
+
+---
+
+now set the coordinates to one of the fountains to test the checkin
+
+---
+
+make another tab that is the map of zurich and show all brunnen and my location on it
+
+---
+
+the map should be more zoomed in .. showing you and 200m around you
+
+---
+
+can you now make screenshots of every tab and put it into the readme?
