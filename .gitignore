@@ -1,1 +1,11 @@
+*.iml
 .claude
+.entire
+.gradle/
+.idea/
+.kotlin/
+app/build/
+build/
+captures/
+local.properties
+app/google-services.json
