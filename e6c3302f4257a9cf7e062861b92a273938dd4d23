@@ -1,0 +1,23 @@
+.gitignore
+  f93000d59d91cff7 1
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.5",
+  "base_commit_sha": "e6c3302f4257a9cf7e062861b92a273938dd4d23",
+  "prompts": {
+    "f93000d59d91cff7": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "c79f84c2-e2d9-41ff-a502-09da1c3cf958",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Enes Poyraz",
+      "messages": [],
+      "total_additions": 1,
+      "total_deletions": 0,
+      "accepted_lines": 1,
+      "overriden_lines": 0
+    }
+  }
+}
