@@ -1,0 +1,67 @@
+app/src/main/java/com/example/brunnenapp/data/Fountain.kt
+  cfc3ac891feda96f 1-35
+README.md
+  cfc3ac891feda96f 1-44
+app/src/main/java/com/example/brunnenapp/MainActivity.kt
+  cfc3ac891feda96f 1-256
+settings.gradle.kts
+  cfc3ac891feda96f 1-18
+app/build.gradle.kts
+  cfc3ac891feda96f 1-93
+app/src/main/java/com/example/brunnenapp/ui/theme/Theme.kt
+  cfc3ac891feda96f 1-16
+app/src/main/java/com/example/brunnenapp/ui/screens/NicknameScreen.kt
+  cfc3ac891feda96f 1-140
+build.gradle.kts
+  cfc3ac891feda96f 1-6
+gradle.properties
+  cfc3ac891feda96f 1-7
+app/src/main/java/com/example/brunnenapp/ui/screens/CompassScreen.kt
+  cfc3ac891feda96f 1-483
+.gitignore
+  cfc3ac891feda96f 3,11
+app/src/main/AndroidManifest.xml
+  cfc3ac891feda96f 1-23
+app/src/main/java/com/example/brunnenapp/data/AuthClient.kt
+  cfc3ac891feda96f 1-308
+app/src/main/java/com/example/brunnenapp/ui/screens/LoginScreen.kt
+  cfc3ac891feda96f 1-233
+app/src/main/java/com/example/brunnenapp/ui/screens/LeaderboardScreen.kt
+  cfc3ac891feda96f 1-331
+firestore.rules
+  cfc3ac891feda96f 1-18
+firebase.json
+  cfc3ac891feda96f 1-5
+app/src/main/java/com/example/brunnenapp/data/FountainRepository.kt
+  cfc3ac891feda96f 1-69
+app/src/main/java/com/example/brunnenapp/ui/screens/MapScreen.kt
+  cfc3ac891feda96f 1-122
+app/src/main/res/values/strings.xml
+  cfc3ac891feda96f 1-3
+app/src/main/java/com/example/brunnenapp/ui/screens/FountainListScreen.kt
+  cfc3ac891feda96f 1-373
+app/proguard-rules.pro
+  cfc3ac891feda96f 1
+app/src/main/res/values/themes.xml
+  cfc3ac891feda96f 1-3
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.2.5",
+  "base_commit_sha": "42705e6b4bf44507f5d11925659643313ae5b3f5",
+  "prompts": {
+    "cfc3ac891feda96f": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "93056193-ce55-4a7e-ab04-0b74de7ac6bb",
+        "model": "claude-opus-4-6"
+      },
+      "human_author": "Enes Poyraz",
+      "messages": [],
+      "total_additions": 3406,
+      "total_deletions": 817,
+      "accepted_lines": 2589,
+      "overriden_lines": 0
+    }
+  }
+}
