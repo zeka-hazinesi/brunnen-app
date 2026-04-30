@@ -26,7 +26,7 @@ Native Android App zum Entdecken, Finden und Einchecken an den 1287 Trinkbrunnen
 
 ## Setup
 
-1. Erstelle ein Firebase-Projekt und registriere die Android App (`com.example.brunnenapp`)
+1. Erstelle ein Firebase-Projekt und registriere die Android App (`app.brunnen.zurich`)
 2. Lade `google-services.json` in `app/` herunter
 3. Aktiviere Google als Sign-In Provider in Firebase Authentication
 4. Setze `WEB_CLIENT_ID` in `gradle.properties`

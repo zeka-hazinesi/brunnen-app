@@ -1,4 +1,4 @@
-package com.example.brunnenapp.data
+package app.brunnen.zurich.data
 
 data class Fountain(
     val id: Int,

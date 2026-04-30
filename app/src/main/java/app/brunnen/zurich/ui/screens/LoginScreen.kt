@@ -1,4 +1,4 @@
-package com.example.brunnenapp.ui.screens
+package app.brunnen.zurich.ui.screens
 
 import android.app.Activity
 import android.content.Context
@@ -15,14 +15,18 @@ import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.rememberScrollState
+import androidx.compose.foundation.shape.CircleShape
 import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.foundation.verticalScroll
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.WaterDrop
+import androidx.compose.material3.Button
 import androidx.compose.material3.ButtonDefaults
 import androidx.compose.material3.Card
 import androidx.compose.material3.CardDefaults
 import androidx.compose.material3.CircularProgressIndicator
+import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
-import androidx.compose.material3.OutlinedButton
 import androidx.compose.material3.Text
 import androidx.compose.material3.TextButton
 import androidx.compose.runtime.Composable
@@ -33,19 +37,23 @@ import androidx.compose.runtime.rememberCoroutineScope
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
+import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.text.style.TextAlign
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.credentials.exceptions.GetCredentialCancellationException
 import androidx.credentials.exceptions.GetCredentialProviderConfigurationException
 import androidx.credentials.exceptions.GetCredentialUnknownException
 import androidx.credentials.exceptions.NoCredentialException
-import com.example.brunnenapp.data.AuthClient
-import com.example.brunnenapp.ui.theme.TextPrimary
-import com.example.brunnenapp.ui.theme.TextSecondary
-import com.example.brunnenapp.ui.theme.WaterDark
-import com.example.brunnenapp.ui.theme.WaterTeal
+import app.brunnen.zurich.data.AuthClient
+import app.brunnen.zurich.ui.theme.TextPrimary
+import app.brunnen.zurich.ui.theme.TextSecondary
+import app.brunnen.zurich.ui.theme.WaterDark
+import app.brunnen.zurich.ui.theme.WaterTeal
 import kotlinx.coroutines.launch
 
 private const val Tag = "LoginScreen"
@@ -82,32 +90,43 @@ fun LoginScreen(
         modifier = Modifier
             .fillMaxSize()
             .verticalScroll(rememberScrollState())
-            .padding(horizontal = 24.dp, vertical = 28.dp),
+            .padding(horizontal = 28.dp, vertical = 48.dp),
         verticalArrangement = Arrangement.Center,
         horizontalAlignment = Alignment.CenterHorizontally,
     ) {
-        Card(
-            colors = CardDefaults.cardColors(containerColor = WaterDark),
-            shape = RoundedCornerShape(22.dp),
+        Box(
+            modifier = Modifier
+                .size(96.dp)
+                .shadow(16.dp, CircleShape, spotColor = WaterTeal.copy(alpha = 0.3f))
+                .background(
+                    brush = Brush.linearGradient(listOf(WaterTeal, WaterDark)),
+                    shape = CircleShape,
+                ),
+            contentAlignment = Alignment.Center,
         ) {
-            Box(
-                modifier = Modifier.size(72.dp),
-                contentAlignment = Alignment.Center,
-            ) {
-                Text(
-                    text = "\uD83D\uDEB0",
-                    style = MaterialTheme.typography.headlineLarge,
-                )
-            }
+            Icon(
+                imageVector = Icons.Default.WaterDrop,
+                contentDescription = null,
+                tint = Color.White,
+                modifier = Modifier.size(44.dp),
+            )
         }
 
-        Spacer(modifier = Modifier.height(20.dp))
+        Spacer(modifier = Modifier.height(28.dp))
 
         Text(
-            text = "Trinkbrunnen Zürich",
-            style = MaterialTheme.typography.headlineSmall,
+            text = "Trinkbrunnen",
+            style = MaterialTheme.typography.headlineMedium,
             fontWeight = FontWeight.Bold,
             color = TextPrimary,
+            letterSpacing = (-0.5).sp,
+        )
+        Text(
+            text = "Zürich",
+            style = MaterialTheme.typography.headlineMedium,
+            fontWeight = FontWeight.Light,
+            color = WaterTeal,
+            letterSpacing = (-0.5).sp,
         )
 
         Spacer(modifier = Modifier.height(8.dp))
@@ -116,17 +135,19 @@ fun LoginScreen(
             text = "Entdecke die Trinkbrunnen deiner Stadt",
             style = MaterialTheme.typography.bodyLarge,
             color = TextSecondary,
+            textAlign = TextAlign.Center,
         )
 
-        Spacer(modifier = Modifier.height(24.dp))
+        Spacer(modifier = Modifier.height(40.dp))
 
         Card(
-            colors = CardDefaults.cardColors(containerColor = Color(0xFFFDFDFC)),
-            shape = RoundedCornerShape(28.dp),
+            colors = CardDefaults.cardColors(containerColor = Color.White),
+            shape = RoundedCornerShape(24.dp),
+            elevation = CardDefaults.cardElevation(defaultElevation = 2.dp),
         ) {
             Column(
-                modifier = Modifier.padding(24.dp),
-                verticalArrangement = Arrangement.spacedBy(16.dp),
+                modifier = Modifier.padding(28.dp),
+                verticalArrangement = Arrangement.spacedBy(20.dp),
             ) {
                 Text(
                     text = "Willkommen",
@@ -138,64 +159,64 @@ fun LoginScreen(
                     text = "Melde dich mit deinem Google-Konto an, um Brunnen zu entdecken, einzuchecken und Punkte zu sammeln.",
                     style = MaterialTheme.typography.bodyMedium,
                     color = TextSecondary,
+                    lineHeight = 22.sp,
                 )
 
                 errorMessage?.let { msg ->
                     Card(
-                        colors = CardDefaults.cardColors(containerColor = Color(0xFFFFF1F2)),
-                        shape = RoundedCornerShape(16.dp),
+                        colors = CardDefaults.cardColors(containerColor = Color(0xFFFEF2F2)),
+                        shape = RoundedCornerShape(12.dp),
                     ) {
                         Text(
                             text = msg,
-                            modifier = Modifier.padding(16.dp),
+                            modifier = Modifier.padding(14.dp),
                             style = MaterialTheme.typography.bodyMedium,
-                            color = Color(0xFFB42318),
+                            color = Color(0xFFDC2626),
                         )
                     }
                 }
 
-                OutlinedButton(
+                Button(
                     onClick = {
                         doSignIn { authClient.signInWithBottomSheet(it) }
                     },
                     enabled = !isWorking,
-                    modifier = Modifier.fillMaxWidth(),
-                    shape = RoundedCornerShape(18.dp),
-                    colors = ButtonDefaults.outlinedButtonColors(
-                        containerColor = Color.White,
-                        contentColor = Color(0xFF111827),
+                    modifier = Modifier
+                        .fillMaxWidth()
+                        .height(52.dp),
+                    shape = RoundedCornerShape(14.dp),
+                    colors = ButtonDefaults.buttonColors(
+                        containerColor = TextPrimary,
+                        contentColor = Color.White,
+                    ),
+                    elevation = ButtonDefaults.buttonElevation(
+                        defaultElevation = 2.dp,
+                        pressedElevation = 0.dp,
                     ),
                 ) {
                     if (isWorking) {
                         CircularProgressIndicator(
-                            modifier = Modifier.size(18.dp),
+                            modifier = Modifier.size(20.dp),
                             strokeWidth = 2.dp,
-                            color = WaterTeal,
+                            color = Color.White,
                         )
                         Spacer(modifier = Modifier.size(12.dp))
-                        Text("Anmeldung läuft...")
+                        Text(
+                            "Anmeldung läuft...",
+                            fontWeight = FontWeight.SemiBold,
+                        )
                     } else {
-                        Card(
-                            colors = CardDefaults.cardColors(containerColor = Color(0xFFF3F4F6)),
-                            shape = RoundedCornerShape(8.dp),
-                        ) {
-                            Box(
-                                modifier = Modifier.size(24.dp),
-                                contentAlignment = Alignment.Center,
-                            ) {
-                                Text(
-                                    text = "G",
-                                    style = MaterialTheme.typography.titleMedium,
-                                    fontWeight = FontWeight.Bold,
-                                    color = Color(0xFF1A73E8),
-                                )
-                            }
-                        }
+                        Text(
+                            text = "G",
+                            style = MaterialTheme.typography.titleMedium,
+                            fontWeight = FontWeight.Bold,
+                            color = Color.White,
+                        )
                         Spacer(modifier = Modifier.size(12.dp))
                         Text(
                             text = "Mit Google anmelden",
-                            style = MaterialTheme.typography.titleMedium,
-                            fontWeight = FontWeight.Medium,
+                            style = MaterialTheme.typography.titleSmall,
+                            fontWeight = FontWeight.SemiBold,
                         )
                     }
                 }
@@ -207,7 +228,11 @@ fun LoginScreen(
                     enabled = !isWorking,
                     modifier = Modifier.align(Alignment.CenterHorizontally),
                 ) {
-                    Text("Alternativer Google-Login")
+                    Text(
+                        "Alternativer Google-Login",
+                        color = TextSecondary,
+                        fontSize = 13.sp,
+                    )
                 }
             }
         }

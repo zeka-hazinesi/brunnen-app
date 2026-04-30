@@ -1,4 +1,4 @@
-package com.example.brunnenapp.data
+package app.brunnen.zurich.data
 
 import android.app.Activity
 import android.content.Context
@@ -11,7 +11,7 @@ import androidx.credentials.GetCredentialRequest
 import androidx.credentials.GetCredentialResponse
 import androidx.credentials.exceptions.ClearCredentialException
 import androidx.credentials.exceptions.NoCredentialException
-import com.example.brunnenapp.BuildConfig
+import app.brunnen.zurich.BuildConfig
 import com.google.android.libraries.identity.googleid.GetGoogleIdOption
 import com.google.android.libraries.identity.googleid.GetSignInWithGoogleOption
 import com.google.android.libraries.identity.googleid.GoogleIdTokenCredential
@@ -131,6 +131,15 @@ class AuthClient(context: Context) {
                 "checkInCount" to currentCount + 1,
             ))
         }.await()
+    }
+
+    suspend fun getVisitedFountainIds(): Set<Int> {
+        val uid = currentUserId ?: return emptySet()
+        val result = firestore.collection("checkins")
+            .whereEqualTo("userId", uid)
+            .get()
+            .await()
+        return result.documents.mapNotNull { it.getLong("fountainId")?.toInt() }.toSet()
     }
 
     suspend fun getLeaderboard(): List<UserProfile> {

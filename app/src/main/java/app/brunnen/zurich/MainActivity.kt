@@ -1,4 +1,4 @@
-package com.example.brunnenapp
+package app.brunnen.zurich
 
 import android.Manifest
 import android.os.Bundle
@@ -10,6 +10,8 @@ import androidx.compose.foundation.background
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.size
+import androidx.compose.foundation.shape.RoundedCornerShape
 import androidx.compose.material.icons.Icons
 import androidx.compose.material.icons.filled.EmojiEvents
 import androidx.compose.material.icons.filled.Explore
@@ -34,23 +36,28 @@ import androidx.compose.runtime.saveable.rememberSaveable
 import androidx.compose.runtime.setValue
 import androidx.compose.ui.Alignment
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.draw.shadow
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.graphics.vector.ImageVector
 import androidx.compose.ui.text.font.FontWeight
+import androidx.compose.ui.unit.dp
+import androidx.compose.ui.unit.sp
 import androidx.core.content.ContextCompat
-import com.example.brunnenapp.data.AuthClient
-import com.example.brunnenapp.ui.screens.CompassScreen
-import com.example.brunnenapp.ui.screens.FountainListScreen
-import com.example.brunnenapp.ui.screens.LeaderboardScreen
-import com.example.brunnenapp.ui.screens.LoginScreen
-import com.example.brunnenapp.ui.screens.MapScreen
-import com.example.brunnenapp.ui.screens.NicknameScreen
-import com.example.brunnenapp.ui.theme.BackgroundBottom
-import com.example.brunnenapp.ui.theme.BackgroundMid
-import com.example.brunnenapp.ui.theme.BackgroundTop
-import com.example.brunnenapp.ui.theme.WaterDark
-import com.example.brunnenapp.ui.theme.WaterTeal
+import app.brunnen.zurich.data.AuthClient
+import app.brunnen.zurich.ui.screens.CompassScreen
+import app.brunnen.zurich.ui.screens.FountainListScreen
+import app.brunnen.zurich.ui.screens.LeaderboardScreen
+import app.brunnen.zurich.ui.screens.LoginScreen
+import app.brunnen.zurich.ui.screens.MapScreen
+import app.brunnen.zurich.ui.screens.NicknameScreen
+import app.brunnen.zurich.ui.theme.BackgroundBottom
+import app.brunnen.zurich.ui.theme.BackgroundMid
+import app.brunnen.zurich.ui.theme.BackgroundTop
+import app.brunnen.zurich.ui.theme.NavyDark
+import app.brunnen.zurich.ui.theme.TextSecondary
+import app.brunnen.zurich.ui.theme.WaterDark
+import app.brunnen.zurich.ui.theme.WaterTeal
 
 private const val Tag = "MainActivity"
 
@@ -153,7 +160,11 @@ private fun AppRoot(
     when (screen) {
         AppScreen.LOADING -> {
             Box(modifier = Modifier.fillMaxSize(), contentAlignment = Alignment.Center) {
-                CircularProgressIndicator(color = WaterTeal)
+                CircularProgressIndicator(
+                    color = WaterTeal,
+                    strokeWidth = 3.dp,
+                    modifier = Modifier.size(40.dp),
+                )
             }
         }
 
@@ -205,25 +216,39 @@ private fun MainContent(
         containerColor = Color.Transparent,
         bottomBar = {
             NavigationBar(
-                containerColor = Color.White.copy(alpha = 0.95f),
+                containerColor = Color.White,
+                tonalElevation = 0.dp,
+                modifier = Modifier.shadow(
+                    elevation = 12.dp,
+                    shape = RoundedCornerShape(topStart = 20.dp, topEnd = 20.dp),
+                    clip = false,
+                    spotColor = Color.Black.copy(alpha = 0.08f),
+                ),
             ) {
                 bottomNavItems.forEachIndexed { index, item ->
                     NavigationBarItem(
                         selected = selectedTab == index,
                         onClick = { selectedTab = index },
                         icon = {
-                            Icon(item.icon, contentDescription = item.label)
+                            Icon(
+                                item.icon,
+                                contentDescription = item.label,
+                                modifier = Modifier.size(if (selectedTab == index) 26.dp else 24.dp),
+                            )
                         },
                         label = {
                             Text(
                                 text = item.label,
-                                fontWeight = if (selectedTab == index) FontWeight.Bold else FontWeight.Normal,
+                                fontSize = 11.sp,
+                                fontWeight = if (selectedTab == index) FontWeight.Bold else FontWeight.Medium,
                             )
                         },
                         colors = NavigationBarItemDefaults.colors(
                             selectedIconColor = WaterTeal,
                             selectedTextColor = WaterDark,
-                            indicatorColor = Color(0xFFE0F7FA),
+                            unselectedIconColor = TextSecondary,
+                            unselectedTextColor = TextSecondary,
+                            indicatorColor = WaterTeal.copy(alpha = 0.12f),
                         ),
                     )
                 }
@@ -243,9 +268,11 @@ private fun MainContent(
                 )
                 1 -> MapScreen(
                     hasLocationPermission = hasLocationPermission,
+                    authClient = authClient,
                 )
                 2 -> FountainListScreen(
                     hasLocationPermission = hasLocationPermission,
+                    authClient = authClient,
                 )
                 3 -> LeaderboardScreen(
                     authClient = authClient,

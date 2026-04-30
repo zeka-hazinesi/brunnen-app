@@ -1,4 +1,4 @@
-package com.example.brunnenapp.data
+package app.brunnen.zurich.data
 
 import android.content.Context
 import android.location.Location
