@@ -1,0 +1,51 @@
+{
+  "cli_version": "dev",
+  "checkpoint_id": "6d798d309541",
+  "strategy": "manual-commit",
+  "branch": "main",
+  "checkpoints_count": 0,
+  "files_touched": [
+    ".gitignore",
+    "README.md",
+    "app/build.gradle.kts",
+    "app/src/main/java/app/brunnen/zurich/MainActivity.kt",
+    "app/src/main/java/app/brunnen/zurich/data/AuthClient.kt",
+    "app/src/main/java/app/brunnen/zurich/data/Fountain.kt",
+    "app/src/main/java/app/brunnen/zurich/data/FountainRepository.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/screens/CompassScreen.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/screens/FountainListScreen.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/screens/LeaderboardScreen.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/screens/LoginScreen.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/screens/MapScreen.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/screens/NicknameScreen.kt",
+    "app/src/main/java/app/brunnen/zurich/ui/theme/Theme.kt",
+    "app/src/main/java/com/example/brunnenapp/MainActivity.kt",
+    "app/src/main/java/com/example/brunnenapp/data/AuthClient.kt",
+    "app/src/main/java/com/example/brunnenapp/data/Fountain.kt",
+    "app/src/main/java/com/example/brunnenapp/data/FountainRepository.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/screens/CompassScreen.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/screens/FountainListScreen.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/screens/LeaderboardScreen.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/screens/LoginScreen.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/screens/MapScreen.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/screens/NicknameScreen.kt",
+    "app/src/main/java/com/example/brunnenapp/ui/theme/Theme.kt",
+    "build.gradle.kts",
+    "gradle/wrapper/gradle-wrapper.properties"
+  ],
+  "sessions": [
+    {
+      "metadata": "/6d/798d309541/0/metadata.json",
+      "transcript": "/6d/798d309541/0/full.jsonl",
+      "content_hash": "/6d/798d309541/0/content_hash.txt",
+      "prompt": "/6d/798d309541/0/prompt.txt"
+    }
+  ],
+  "token_usage": {
+    "input_tokens": 5,
+    "cache_creation_tokens": 22105,
+    "cache_read_tokens": 42592,
+    "output_tokens": 589,
+    "api_call_count": 3
+  }
+}
