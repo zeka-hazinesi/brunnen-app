@@ -1,0 +1,87 @@
+can you go through every screen and overhaul them visually. It should not look like a demo and more like a polished app. Thanks
+
+---
+
+start the android app
+
+---
+
+i see a black screen
+
+---
+
+can you restart the emulator and install the app
+
+---
+
+i just see a black screen .. i think it's something with the emulator not the app
+
+---
+
+i find the standard theme on open street map ugly .. is there a different theme or some other mapping solution that look cleaner?
+
+---
+
+is Google Maps free?
+
+---
+
+is cartodb free?
+
+---
+
+go for it
+
+---
+
+the list with all the brunnen is slow .. any way to make it load faster. it's slow specially when i open it for the first time
+
+---
+
+would it make sense to have client side pagination ... show maybe like 25 closest and then it loads more when you scroll  also .. add a filter that shows only the ones that are not visited and you should be able to toggle it
+
+---
+
+when the nicht besucht filter is on, show x from total Brunnen instead of x Brunnen
+
+---
+
+if i am already checked in, i shouldn't see the brunnen in the Kompass
+
+---
+
+i took some screenshots with the emulator, where are they saved?
+
+---
+
+can you open that folder
+
+---
+
+i only see one screenshot
+
+---
+
+<task-notification>
+<task-id>b79vn8haf</task-id>
+<tool-use-id>toolu_016aikUKJe9RohRUJJ4YKS8q</tool-use-id>
+<output-file>C:\Users\enesp\AppData\Local\Temp\claude\C--Users-enesp-Desktop-coding-brunnen-app\d8f8d9b8-26b5-4066-8a3e-ded742faefd0\tasks\b79vn8haf.output</output-file>
+<status>completed</status>
+<summary>Background command "Broader search for recent images" completed (exit code 0)</summary>
+</task-notification>
+
+---
+
+C:\Users\enesp\Desktop\emulator-screenshots has only 1 file
+
+---
+
+yes
+
+---
+
+can you resize those images to a third of it's size?
+
+---
+
+i want a new release for the internal testing

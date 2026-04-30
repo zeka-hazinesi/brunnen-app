@@ -1,17 +1,17 @@
 {
   "cli_version": "dev",
   "checkpoint_id": "6d798d309541",
+  "session_id": "d8f8d9b8-26b5-4066-8a3e-ded742faefd0",
   "strategy": "manual-commit",
+  "created_at": "2026-04-30T18:21:36.1765004Z",
   "branch": "main",
-  "checkpoints_count": 28,
+  "checkpoints_count": 21,
   "files_touched": [
     ".gitignore",
     "README.md",
     "app/build.gradle.kts",
     "app/src/main/java/app/brunnen/zurich/MainActivity.kt",
     "app/src/main/java/app/brunnen/zurich/data/AuthClient.kt",
-    "app/src/main/java/app/brunnen/zurich/data/Fountain.kt",
-    "app/src/main/java/app/brunnen/zurich/data/FountainRepository.kt",
     "app/src/main/java/app/brunnen/zurich/ui/screens/CompassScreen.kt",
     "app/src/main/java/app/brunnen/zurich/ui/screens/FountainListScreen.kt",
     "app/src/main/java/app/brunnen/zurich/ui/screens/LeaderboardScreen.kt",
@@ -33,31 +33,29 @@
     "build.gradle.kts",
     "gradle/wrapper/gradle-wrapper.properties"
   ],
-  "sessions": [
-    {
-      "metadata": "/6d/798d309541/0/metadata.json",
-      "transcript": "/6d/798d309541/0/full.jsonl",
-      "content_hash": "/6d/798d309541/0/content_hash.txt",
-      "prompt": "/6d/798d309541/0/prompt.txt"
-    },
-    {
-      "metadata": "/6d/798d309541/1/metadata.json",
-      "transcript": "/6d/798d309541/1/full.jsonl",
-      "content_hash": "/6d/798d309541/1/content_hash.txt",
-      "prompt": "/6d/798d309541/1/prompt.txt"
-    },
-    {
-      "metadata": "/6d/798d309541/2/metadata.json",
-      "transcript": "/6d/798d309541/2/full.jsonl",
-      "content_hash": "/6d/798d309541/2/content_hash.txt",
-      "prompt": "/6d/798d309541/2/prompt.txt"
-    }
-  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6[1m]",
+  "turn_id": "4af488fdc9be",
   "token_usage": {
-    "input_tokens": 4417,
-    "cache_creation_tokens": 490757,
-    "cache_read_tokens": 24513390,
-    "output_tokens": 120408,
-    "api_call_count": 338
+    "input_tokens": 4079,
+    "cache_creation_tokens": 112002,
+    "cache_read_tokens": 8816728,
+    "output_tokens": 46378,
+    "api_call_count": 104
+  },
+  "session_metrics": {
+    "turn_count": 21
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-04-30T18:21:35.1785192Z",
+    "agent_lines": 2826,
+    "agent_removed": 2386,
+    "human_added": 104,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 2930,
+    "total_lines_changed": 5316,
+    "agent_percentage": 98.0436418359669,
+    "metric_version": 2
   }
 }
