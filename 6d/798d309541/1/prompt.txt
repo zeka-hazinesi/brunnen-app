@@ -1,0 +1,41 @@
+why is master not the default branch? do it
+
+---
+
+i still see the other branch as default on remote
+
+---
+
+i want upgrade all pacakges
+
+---
+
+upgrade all packages .. even major
+
+---
+
+app.brunnen.zurich
+
+---
+
+can you run it?
+
+---
+
+can you create a release for internal testing?
+
+---
+
+you can do that .. don't you have the GPP?
+
+---
+
+go checkout xonaapp
+
+---
+
+../xonaapp
+
+---
+
+yes. i just did.

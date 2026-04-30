@@ -1,7 +1,9 @@
 {
   "cli_version": "dev",
   "checkpoint_id": "6d798d309541",
+  "session_id": "93056193-ce55-4a7e-ab04-0b74de7ac6bb",
   "strategy": "manual-commit",
+  "created_at": "2026-04-30T18:21:34.8982507Z",
   "branch": "main",
   "checkpoints_count": 7,
   "files_touched": [
@@ -33,25 +35,29 @@
     "build.gradle.kts",
     "gradle/wrapper/gradle-wrapper.properties"
   ],
-  "sessions": [
-    {
-      "metadata": "/6d/798d309541/0/metadata.json",
-      "transcript": "/6d/798d309541/0/full.jsonl",
-      "content_hash": "/6d/798d309541/0/content_hash.txt",
-      "prompt": "/6d/798d309541/0/prompt.txt"
-    },
-    {
-      "metadata": "/6d/798d309541/1/metadata.json",
-      "transcript": "/6d/798d309541/1/full.jsonl",
-      "content_hash": "/6d/798d309541/1/content_hash.txt",
-      "prompt": "/6d/798d309541/1/prompt.txt"
-    }
-  ],
+  "agent": "Claude Code",
+  "model": "claude-opus-4-6[1m]",
+  "turn_id": "42bbf914e2ec",
   "token_usage": {
-    "input_tokens": 338,
-    "cache_creation_tokens": 378755,
-    "cache_read_tokens": 15696662,
-    "output_tokens": 74030,
-    "api_call_count": 234
+    "input_tokens": 333,
+    "cache_creation_tokens": 356650,
+    "cache_read_tokens": 15654070,
+    "output_tokens": 73441,
+    "api_call_count": 231
+  },
+  "session_metrics": {
+    "turn_count": 8
+  },
+  "initial_attribution": {
+    "calculated_at": "2026-04-30T18:21:32.9389923Z",
+    "agent_lines": 2930,
+    "agent_removed": 2386,
+    "human_added": 0,
+    "human_modified": 0,
+    "human_removed": 0,
+    "total_committed": 2930,
+    "total_lines_changed": 5316,
+    "agent_percentage": 100,
+    "metric_version": 2
   }
 }
