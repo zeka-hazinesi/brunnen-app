@@ -1,0 +1,73 @@
+ios/BrunnenZurich/Assets.xcassets/Contents.json
+  967125ed9d347461 2
+ios/.gitignore
+  967125ed9d347461 1-21
+ios/BrunnenZurich/Views/FountainDetailView.swift
+  967125ed9d347461 1-84
+ios/BrunnenZurich/Models/Fountain.swift
+  967125ed9d347461 1-44
+ios/BrunnenZurich/Views/CompassView.swift
+  967125ed9d347461 1-289
+ios/BrunnenZurich/App/BrunnenZurichApp.swift
+  967125ed9d347461 1-25
+ios/BrunnenZurich/Info.plist
+  967125ed9d347461 1-55
+ios/BrunnenZurich/Resources/GoogleService-Info.plist.example
+  967125ed9d347461 1-16
+ios/BrunnenZurich/Services/AuthService.swift
+  967125ed9d347461 1-135
+ios/BrunnenZurich/Services/CheckInService.swift
+  967125ed9d347461 1-58
+ios/BrunnenZurich/Views/LeaderboardView.swift
+  967125ed9d347461 1-76
+ios/BrunnenZurich/Services/LocationService.swift
+  967125ed9d347461 1-64
+ios/BrunnenZurich/Assets.xcassets/AppIcon.appiconset/Contents.json
+  967125ed9d347461 1-11
+ios/BrunnenZurich/Assets.xcassets/AccentColor.colorset/Contents.json
+  967125ed9d347461 1-12
+ios/BrunnenZurich/App/Theme.swift
+  967125ed9d347461 1-12
+ios/BrunnenZurich/Services/FountainRepository.swift
+  967125ed9d347461 1-59
+ios/BrunnenZurich/Services/LeaderboardService.swift
+  967125ed9d347461 1-73
+ios/BrunnenZurich/App/RootView.swift
+  967125ed9d347461 1-37
+ios/BrunnenZurich/Views/FountainListView.swift
+  967125ed9d347461 1-91
+ios/BrunnenZurich/Views/LoginView.swift
+  967125ed9d347461 1-60
+ios/BrunnenZurich/Views/NicknameView.swift
+  967125ed9d347461 1-57
+ios/BrunnenZurich/Views/ProfileSheet.swift
+  967125ed9d347461 1-72
+ios/README.md
+  967125ed9d347461 1-51
+ios/BrunnenZurich/Resources/brunnen.json
+  967125ed9d347461 1-50199
+ios/BrunnenZurich/Views/MapScreen.swift
+  967125ed9d347461 1-154
+ios/project.yml
+  967125ed9d347461 1-69
+---
+{
+  "schema_version": "authorship/3.0.0",
+  "git_ai_version": "1.3.4",
+  "base_commit_sha": "250176b4fc7e451ba7cd87ae37966e42567e74cf",
+  "prompts": {
+    "967125ed9d347461": {
+      "agent_id": {
+        "tool": "claude",
+        "id": "a20deebf-c94d-4b20-8c13-b6b3fdde0bce",
+        "model": "claude-opus-4-7"
+      },
+      "human_author": "Enes Poyraz",
+      "messages": [],
+      "total_additions": 157944,
+      "total_deletions": 103990,
+      "accepted_lines": 157944,
+      "overriden_lines": 0
+    }
+  }
+}
