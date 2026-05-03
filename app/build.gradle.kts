@@ -28,8 +28,8 @@ android {
         applicationId = "app.brunnen.zurich"
         minSdk = 26
         targetSdk = 36
-        versionCode = 2
-        versionName = "1.1"
+        versionCode = 11
+        versionName = "1.10"
 
         testInstrumentationRunner = "androidx.test.runner.AndroidJUnitRunner"
         buildConfigField("String", "WEB_CLIENT_ID", "\"$webClientId\"")
@@ -108,6 +108,6 @@ play {
         serviceAccountCredentials.set(serviceAccountFile)
     }
     defaultToAppBundles.set(true)
-    track.set("internal")
+    track.set("alpha")
     releaseStatus.set(com.github.triplet.gradle.androidpublisher.ReleaseStatus.DRAFT)
 }
