@@ -1,0 +1,69 @@
+name: BrunnenZurich
+options:
+  bundleIdPrefix: app.brunnen.zurich
+  deploymentTarget:
+    iOS: "17.0"
+  developmentLanguage: de
+  createIntermediateGroups: true
+settings:
+  base:
+    SWIFT_VERSION: "5.9"
+    IPHONEOS_DEPLOYMENT_TARGET: "17.0"
+    MARKETING_VERSION: "1.0.0"
+    CURRENT_PROJECT_VERSION: "1"
+    DEVELOPMENT_TEAM: "976U699AV7"
+    CODE_SIGN_STYLE: Automatic
+    ENABLE_USER_SCRIPT_SANDBOXING: NO
+
+packages:
+  Firebase:
+    url: https://github.com/firebase/firebase-ios-sdk
+    from: "11.0.0"
+  GoogleSignIn:
+    url: https://github.com/google/GoogleSignIn-iOS
+    from: "7.1.0"
+
+targets:
+  BrunnenZurich:
+    type: application
+    platform: iOS
+    sources:
+      - path: BrunnenZurich
+        excludes:
+          - "Resources/GoogleService-Info.plist.example"
+    resources:
+      - BrunnenZurich/Resources/brunnen.json
+      - BrunnenZurich/Resources/GoogleService-Info.plist
+    info:
+      path: BrunnenZurich/Info.plist
+      properties:
+        CFBundleDisplayName: Brunnen Zürich
+        UILaunchScreen: {}
+        UIRequiredDeviceCapabilities:
+          - arm64
+          - location-services
+          - magnetometer
+        UIRequiresFullScreen: false
+        UISupportedInterfaceOrientations:
+          - UIInterfaceOrientationPortrait
+        NSLocationWhenInUseUsageDescription: "Wir brauchen deinen Standort, um den nächsten Brunnen zu finden und Check-ins zu verifizieren."
+        NSCameraUsageDescription: "Foto vom Brunnen aufnehmen."
+        NSPhotoLibraryAddUsageDescription: "Brunnen-Fotos speichern."
+        CFBundleURLTypes:
+          - CFBundleURLSchemes:
+              - com.googleusercontent.apps.84920619073-novpmv86naemafm56ojd7vnm17fnl3hm
+        GIDClientID: 84920619073-novpmv86naemafm56ojd7vnm17fnl3hm.apps.googleusercontent.com
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: app.brunnen.zurich
+        TARGETED_DEVICE_FAMILY: "1"
+        GENERATE_INFOPLIST_FILE: NO
+    dependencies:
+      - package: Firebase
+        product: FirebaseAuth
+      - package: Firebase
+        product: FirebaseFirestore
+      - package: GoogleSignIn
+        product: GoogleSignIn
+      - package: GoogleSignIn
+        product: GoogleSignInSwift

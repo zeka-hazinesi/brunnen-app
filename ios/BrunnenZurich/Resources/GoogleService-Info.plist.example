@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+  Place your real GoogleService-Info.plist next to this file (download from
+  Firebase Console → Project Settings → Your apps → iOS app).
+  Then re-run `xcodegen generate`.
+-->
+<plist version="1.0">
+<dict>
+  <key>CLIENT_ID</key>
+  <string>REPLACE_ME.apps.googleusercontent.com</string>
+  <key>REVERSED_CLIENT_ID</key>
+  <string>com.googleusercontent.apps.REPLACE_ME</string>
+  <key>BUNDLE_ID</key>
+  <string>app.brunnen.zurich</string>
+</dict>
+</plist>
